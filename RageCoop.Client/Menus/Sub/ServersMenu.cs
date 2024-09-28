@@ -102,10 +102,11 @@ namespace RageCoop.Client.Menus
                         }
                         catch (Exception ex)
                         {
+                            Main.Logger.Error(ex);
                             Notification.PostTicker($"~r~{ex.Message}", false);
                             if (server.useZT)
                             {
-                                Notification.PostTicker($"Make sure ZeroTier is correctly installed, download it from https://www.zerotier.com/", false);
+                                Notification.PostTicker($"Make sure ZeroTier is correctly installed, download it from https://www.zerotier.com/. \nCheck the log file, which under folder \"Grand Theft Auto V/Scripts/RageCoop/Data\", for more details.", false);
                             }
                         }
                     };
